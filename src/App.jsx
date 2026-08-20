@@ -61,6 +61,7 @@ import RibbonTicker from "./components/RibbonTicker";
 import FeaturesSection from "./components/FeaturesSection";
 import ProductShowCase from "./components/ProductShowcase";
 import AboutSection from "./components/AboutSection";
+import CtaSection from "./components/CtaSection";
 
 export default function App() {
     return(
@@ -90,7 +91,7 @@ export default function App() {
             </section>
             {/*  CTA  */}
             <section className="bg-cta">
-                
+                <CtaSection />
             </section>
             
             
