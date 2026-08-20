@@ -200,7 +200,7 @@ export default function ProductShowCase() {
             </ScrollReveal>
 
             {/* Product Grid: cards  cascade in 0.1s apart */}
-            <StaggerContainer staggerDelay={0.1} className="product-grid">
+            <StaggerContainer StaggerDelay={0.1} className="product-grid">
                 {products.map((product) => (
                     // keys must be unique - React uses it to track list items
                     <StaggerItem key={product.name} animation="fadeUp">

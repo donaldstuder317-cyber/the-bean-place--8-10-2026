@@ -60,6 +60,7 @@ import NavBar from "./components/NavBar";
 import RibbonTicker from "./components/RibbonTicker";
 import FeaturesSection from "./components/FeaturesSection";
 import ProductShowCase from "./components/ProductShowcase";
+import AboutSection from "./components/AboutSection";
 
 export default function App() {
     return(
@@ -95,7 +96,7 @@ export default function App() {
             
             {/* ABOUT */}
             <section className="bg-cta" id="about">
-                
+                <AboutSection />   
             </section>
             
             {/* CONTACT */}
