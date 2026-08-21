@@ -116,6 +116,65 @@ export default function CtaSection() {
             <ScrollReveal animation="fadeIn" delay={0.2}>
                 <Separator className="mx-auto mb-5 max-w-48" />
             </ScrollReveal>
+
+            <ScrollReveal animation="fadeUp" delay={0.2}>
+                <p className="cta-subtitle">
+                    Skip the line. Order premium single-origin coffee online and get it roasted to
+                    order. From our roastery to your doorstep in 1-2 buisness days.
+                </p>
+            </ScrollReveal>
+
+            {/* Perks: each item ripples in 0.1s after the last */}
+            <StaggerContainer staggerDelay={0.1} className="cta-perks">
+                {perks.map((perk) => (
+                    //key must be unique!
+                    <StaggerItem key={perk.label} animation="scaleUp" className="cta-perk-item">
+                        <span className="cta-perk-icon">{perk.icon}</span>
+                        <span className="cta-perk-label">{perk.label}</span>
+                    </StaggerItem>
+                ))}
+            </StaggerContainer>
+
+            {/* Buttons: accent = primary action, ghost = secondary */}
+            <ScrollReveal animation="fadeUp" delay={0.15}>
+                <div className="cta-buttons">
+                    <Button variant="accent" size="lg">
+                        Order Now
+                    </Button>
+                    <Button variant="ghost" size="lg">
+                        View Full Menu
+                    </Button>
+                </div>
+            </ScrollReveal>
+
+            {/* Stats - each counts up from 0, dividers between */}
+            <ScrollReveal animation="fadeUp" delay={0.2}>
+                <div className="cta-stats">
+                    <div className="cta-stat">
+                        <span className="cta-stat-number">
+                            <AnimatedCounter target={15} suffix="+" />
+                        </span>
+                        <span className="cta-stat-label">Origins</span>
+                    </div>
+                    <div className="cta-stat-divider" />
+
+                    <div className="cta-stat">
+                        <span className="cta-stat-number">
+                            <AnimatedCounter target={2400} suffix="+" />
+                        </span>
+                        <span className="cta-stat-label">Happy Customers</span>
+                    </div>
+                    <div className="cta-stat-divider" />
+
+                    <div className="cta-stat">
+                        <span className="cta-stat-number">
+                            {/* suffix makes this read "48hr" */}
+                            <AnimatedCounter target={48} suffix="hr" />
+                        </span>
+                        <span className="cta-stat-label">Fresh Delivery</span>
+                    </div>
+                </div>
+            </ScrollReveal>
         </div>
     );
 }
